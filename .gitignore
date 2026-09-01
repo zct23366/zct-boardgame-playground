@@ -48,3 +48,5 @@ history/*.json
 # Boardgame data export (contains user data, not for version control)
 miaoda-boardgame-export.json
 *-export.json
+*-export-nobom.json
+*-export*.json

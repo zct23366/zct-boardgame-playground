@@ -49,7 +49,8 @@ async function upsertRows(table, rows) {
 }
 
 for (const table of tables) {
-  await upsertRows(table, data[table] || []);
+  const rows = (data[table] && Array.isArray(data[table].value)) ? data[table].value : data[table];
+  await upsertRows(table, rows || []);
 }
 
 console.log('\nImport complete.');
